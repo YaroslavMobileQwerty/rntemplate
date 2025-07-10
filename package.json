@@ -6,16 +6,28 @@
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "reconfigure": "APP_NAME=$1 BUNDLE_ID=$2 APP_VERSION=$3 npx expo prebuild --clean"
   },
   "dependencies": {
-    "expo": "~53.0.17",
+    "@react-navigation/native": "^7.1.14",
+    "@react-navigation/native-stack": "^7.3.21",
+    "@types/react": "^19.1.8",
+    "@types/react-native": "^0.73.0",
+    "expo": "53.0.19",
     "expo-status-bar": "~2.2.3",
+    "expo-updates": "~0.28.17",
     "react": "19.0.0",
-    "react-native": "0.79.5"
+    "react-native": "0.79.5",
+    "react-native-safe-area-context": "^5.5.1",
+    "react-native-screens": "^4.11.1",
+    "typescript": "^5.8.3",
+    "zustand": "^5.0.6",
+    "@react-native-async-storage/async-storage": "2.1.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.20.0"
+    "@babel/core": "^7.20.0",
+    "@expo/config-types": "^53.0.5"
   },
   "private": true
 }
