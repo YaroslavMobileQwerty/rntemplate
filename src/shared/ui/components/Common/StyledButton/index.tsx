@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Pressable, ViewStyle, View, TextStyle } from "react-native";
-import styles from "./styles";
 import StyledText from "~/shared/ui/components/Common/StyledText";
+import styles from "./styles";
 
 type ButtonProps = {
   children: string;

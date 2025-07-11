@@ -1,6 +1,6 @@
 import { Component, ReactNode } from "react";
-import { View, Text, Button } from "react-native";
 import { useTranslation } from "react-i18next";
+import { View, Text, Button } from "react-native";
 
 interface Props {
   children: ReactNode;
@@ -9,27 +9,6 @@ interface Props {
 
 interface State {
   hasError: boolean;
-}
-
-export class ErrorBoundary extends Component<Props, State> {
-  state: State = {
-    hasError: false,
-  };
-
-  static getDerivedStateFromError(_: Error): State {
-    return { hasError: true };
-  }
-
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    console.error("ErrorBoundary caught:", error, errorInfo);
-  }
-
-  render() {
-    if (this.state.hasError) {
-      return this.props.fallback || <ErrorFallback />;
-    }
-    return this.props.children;
-  }
 }
 
 function ErrorFallback() {
@@ -50,4 +29,25 @@ function ErrorFallback() {
       />
     </View>
   );
+}
+
+export class ErrorBoundary extends Component<Props, State> {
+  state: State = {
+    hasError: false,
+  };
+
+  static getDerivedStateFromError(): State {
+    return { hasError: true };
+  }
+
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+    console.error("ErrorBoundary caught:", error, errorInfo);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return this.props.fallback || <ErrorFallback />;
+    }
+    return this.props.children;
+  }
 }

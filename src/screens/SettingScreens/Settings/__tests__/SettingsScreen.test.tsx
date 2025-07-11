@@ -1,7 +1,6 @@
-import { render, fireEvent } from "@testing-library/react-native";
 import { NavigationContainer } from "@react-navigation/native";
+import { render, fireEvent } from "@testing-library/react-native";
 import { MainStackNavigator } from "~/app/navigation/Main";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 jest.mock("react-i18next", () => ({
   useTranslation: () => ({
@@ -16,7 +15,6 @@ jest.mock("react-i18next", () => ({
 
 describe("SettingsScreen", () => {
   it("renders correctly", () => {
-    const Stack = createNativeStackNavigator();
     const { getByText } = render(
       <NavigationContainer>
         <MainStackNavigator initialRouteName="Settings" />

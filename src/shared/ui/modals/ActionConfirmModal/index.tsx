@@ -1,11 +1,11 @@
+import { Image } from "expo-image";
 import React from "react";
 import { Pressable, View } from "react-native";
-import { Image } from "expo-image";
 import Modal from "react-native-modal";
-import styles from "./styles";
-import StyledButton from "~/shared/ui/components/Common/StyledButton";
 import Cross from "~/shared/assets/icons/global/cross.png";
+import StyledButton from "~/shared/ui/components/Common/StyledButton";
 import StyledText from "~/shared/ui/components/Common/StyledText";
+import styles from "./styles";
 
 type ConfirmModalProps = {
   isVisible: boolean;

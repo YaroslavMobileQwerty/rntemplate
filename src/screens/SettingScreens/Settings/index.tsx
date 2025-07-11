@@ -1,10 +1,10 @@
-import { View } from "react-native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { useTranslation } from "react-i18next";
+import { View } from "react-native";
 import { MainStackParamList } from "~/app/navigation/Main";
 
-import StyledText from "~/shared/ui/components/Common/StyledText";
 import StyledButton from "~/shared/ui/components/Common/StyledButton";
+import StyledText from "~/shared/ui/components/Common/StyledText";
 
 type SettingsScreenNav = NativeStackNavigationProp<
   MainStackParamList,

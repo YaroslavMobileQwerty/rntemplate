@@ -1,6 +1,6 @@
+import { render, screen } from "@testing-library/react-native";
 import { useTranslation } from "react-i18next";
 import { View, Text } from "react-native";
-import { render, screen } from "@testing-library/react-native";
 import { ErrorBoundary } from "../ErrorBoundary";
 
 jest.mock("react-i18next", () => ({

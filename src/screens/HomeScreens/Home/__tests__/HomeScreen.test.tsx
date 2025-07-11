@@ -1,5 +1,5 @@
-import { render, fireEvent } from "@testing-library/react-native";
 import { NavigationContainer } from "@react-navigation/native";
+import { render, fireEvent } from "@testing-library/react-native";
 import { MainStackNavigator } from "~/app/navigation/Main";
 
 jest.mock("react-i18next", () => ({

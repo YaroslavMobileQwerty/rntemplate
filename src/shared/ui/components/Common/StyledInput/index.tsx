@@ -7,8 +7,8 @@ import {
   ViewStyle,
   TextStyle,
 } from "react-native";
-import StyledText from "~/shared/ui/components/Common/StyledText";
 import theme from "~/shared/theme";
+import StyledText from "~/shared/ui/components/Common/StyledText";
 import styles from "./styles";
 
 type PropTypes = {
