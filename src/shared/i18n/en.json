@@ -4,5 +4,9 @@
   },
   "settings": {
     "title": "Settings Screen"
+  },
+  "error": {
+    "fallback": "Something went wrong!",
+    "try_again": "Try Again"
   }
 }

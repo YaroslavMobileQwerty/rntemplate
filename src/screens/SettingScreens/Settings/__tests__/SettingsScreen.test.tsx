@@ -2,7 +2,6 @@ import { render, fireEvent } from "@testing-library/react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { MainStackNavigator } from "~/app/navigation/Main";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { SettingsScreen } from "..";
 
 jest.mock("react-i18next", () => ({
   useTranslation: () => ({

@@ -4,5 +4,9 @@
   },
   "settings": {
     "title": "Écran des paramètres"
+  },
+  "error": {
+    "fallback": "Quelque chose s'est mal passé !",
+    "try_again": "Essayer à nouveau"
   }
 }
