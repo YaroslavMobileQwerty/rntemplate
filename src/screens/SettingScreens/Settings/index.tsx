@@ -1,7 +1,8 @@
 import { View } from "react-native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
-import { MainStackParamList } from "~/app/navigation/Main";
 import { useTranslation } from "react-i18next";
+import { MainStackParamList } from "~/app/navigation/Main";
+
 import StyledText from "~/shared/ui/components/Common/StyledText";
 import StyledButton from "~/shared/ui/components/Common/StyledButton";
 

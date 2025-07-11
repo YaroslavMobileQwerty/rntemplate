@@ -1,1 +1,1 @@
-pnpm jest
+pnpm lint-staged
