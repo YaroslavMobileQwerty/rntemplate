@@ -9,9 +9,13 @@ export type MainStackParamList = {
 
 const MainStack = createNativeStackNavigator<MainStackParamList>();
 
-export function MainStackNavigator() {
+export function MainStackNavigator({
+  initialRouteName = "Home",
+}: {
+  initialRouteName?: keyof MainStackParamList;
+}) {
   return (
-    <MainStack.Navigator>
+    <MainStack.Navigator initialRouteName={initialRouteName}>
       <MainStack.Screen
         name="Home"
         component={HomeScreen}

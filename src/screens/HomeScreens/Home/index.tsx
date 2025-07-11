@@ -1,25 +1,26 @@
-import { View, Text, Button } from "react-native";
-import { useNavigation } from "@react-navigation/native";
+import { View } from "react-native";
 import { MainStackParamList } from "~/app/navigation/Main";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
+import StyledText from "~/shared/ui/components/Common/StyledText";
+import StyledButton from "~/shared/ui/components/Common/StyledButton";
+import StyledInput from "~/shared/ui/components/Common/StyledInput";
+import { useTranslation } from "react-i18next";
 
-type CreateQuizScreenNav = NativeStackNavigationProp<
-  MainStackParamList,
-  "Home"
->;
+type HomeScreenNav = NativeStackNavigationProp<MainStackParamList, "Home">;
 
 type Props = {
-  navigation: CreateQuizScreenNav;
+  navigation: HomeScreenNav;
 };
 
 export function HomeScreen({ navigation }: Props) {
+  const { t } = useTranslation();
   return (
     <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Text>Welcome to the Home Screen!</Text>
-      <Button
-        title="Go to Settings"
-        onPress={() => navigation.navigate("Settings")}
-      />
+      <StyledText>{t("t.home.title")}</StyledText>
+      <StyledInput placeholder="add some text" />
+      <StyledButton onPress={() => navigation.navigate("Settings")}>
+        Go to Settings
+      </StyledButton>
     </View>
   );
 }
