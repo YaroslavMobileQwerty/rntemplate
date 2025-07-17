@@ -13,7 +13,7 @@ import styles from "./styles";
 
 type PropTypes = {
   label?: string;
-  labelStyle?: TextStyle;
+  labelStyle?: any;
   error?: string;
   errorStyle?: ViewStyle;
   successText?: string;
@@ -21,9 +21,9 @@ type PropTypes = {
   placeholder?: string;
   editable?: boolean;
   value?: string | any;
-  onChangeValue?: (value: any) => void;
-  style?: any;
-  successStyle?: any;
+  onChangeValue?: (value: string | any) => void;
+  style?: TextStyle | TextStyle[];
+  successStyle?: TextStyle;
 };
 
 const StyledInput = React.forwardRef<TextInput, PropTypes & TextInputProps>(

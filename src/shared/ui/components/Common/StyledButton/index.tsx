@@ -8,7 +8,7 @@ type ButtonProps = {
   style?: ViewStyle;
   onPress: () => void;
   disabled?: boolean;
-  textStyle?: TextStyle;
+  textStyle?: any;
   mainStyle?: ViewStyle;
 };
 

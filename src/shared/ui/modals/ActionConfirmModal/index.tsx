@@ -1,6 +1,5 @@
-import { Image } from "expo-image";
-import React from "react";
 import { Pressable, View } from "react-native";
+import { Image } from "expo-image";
 import Modal from "react-native-modal";
 import Cross from "~/shared/assets/icons/global/cross.png";
 import StyledButton from "~/shared/ui/components/Common/StyledButton";
@@ -24,6 +23,7 @@ const ConfirmModal: React.FC<ConfirmModalProps> = ({
 }) => {
   return (
     <Modal
+      testID="confirm-modal"
       isVisible={isVisible}
       onBackdropPress={onClose}
       backdropTransitionOutTiming={0}

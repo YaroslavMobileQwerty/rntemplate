@@ -1,11 +1,11 @@
 import * as React from "react";
-import { Text } from "react-native";
+import { Text, TextStyle } from "react-native";
 import styles from "./styles";
 
 type PropTypes = {
   children: string;
   numberOfLines?: number;
-  style?: any;
+  style?: TextStyle | TextStyle[];
   title?: boolean;
   additional?: boolean;
   medium?: boolean;

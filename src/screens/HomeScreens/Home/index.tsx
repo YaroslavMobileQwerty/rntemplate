@@ -16,10 +16,13 @@ export function HomeScreen({ navigation }: Props) {
   const { t } = useTranslation();
   return (
     <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <StyledText>{t("t.home.title")}</StyledText>
+      <StyledText>{t("home.title")}</StyledText>
       <StyledInput placeholder="add some text" />
       <StyledButton onPress={() => navigation.navigate("Settings")}>
         Go to Settings
+      </StyledButton>
+      <StyledButton onPress={() => navigation.navigate("WebView")}>
+        Go to WebView
       </StyledButton>
     </View>
   );

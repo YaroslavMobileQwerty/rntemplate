@@ -1,12 +1,12 @@
-import { NavigationContainer } from "@react-navigation/native";
 import { render, fireEvent } from "@testing-library/react-native";
-import { MainStackNavigator } from "~/app/navigation/Main";
+import { HomeScreen } from "../index";
+import { mockNavigate, createMockNavigation } from "~/../jest.setup";
 
 jest.mock("react-i18next", () => ({
   useTranslation: () => ({
     t: (key: string) => {
       const translations: { [key: string]: string } = {
-        "t.home.title": "Welcome to Home Screen",
+        "home.title": "Welcome to Home Screen",
       };
       return translations[key] || key;
     },
@@ -14,11 +14,15 @@ jest.mock("react-i18next", () => ({
 }));
 
 describe("HomeScreen", () => {
+  beforeEach(() => {
+    mockNavigate.mockClear();
+  });
+
+  const navigation = createMockNavigation("Home");
+
   it("renders correctly", () => {
     const { getByText, getByPlaceholderText } = render(
-      <NavigationContainer>
-        <MainStackNavigator />
-      </NavigationContainer>
+      <HomeScreen navigation={navigation} />
     );
 
     expect(getByText("Welcome to Home Screen")).toBeTruthy();
@@ -29,15 +33,11 @@ describe("HomeScreen", () => {
   });
 
   it("navigates to Settings on button press", () => {
-    const { getByText } = render(
-      <NavigationContainer>
-        <MainStackNavigator />
-      </NavigationContainer>
-    );
+    const { getByText } = render(<HomeScreen navigation={navigation} />);
 
     const button = getByText("Go to Settings");
     fireEvent.press(button);
 
-    expect(button).toBeTruthy();
+    expect(mockNavigate).toHaveBeenCalledWith("Settings");
   });
 });

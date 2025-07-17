@@ -19,7 +19,7 @@ export function SettingsScreen({ navigation }: Props) {
   const { t } = useTranslation();
   return (
     <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <StyledText>{t("t.settings.title")}</StyledText>
+      <StyledText>{t("settings.title")}</StyledText>
       <StyledButton onPress={() => navigation.navigate("Settings")}>
         Back to Home
       </StyledButton>
